@@ -1,0 +1,23 @@
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th>Category</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% restaurants.each do |restaurant| %>
+      <tr>
+        <td><%= link_to restaurant.name, restaurant%></td>
+        <td><%= restaurant.address %></td>
+        <td><%= restaurant.phone_number %></td>
+        <td><%= restaurant.category %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,12 @@
+<% if notice.present? %>
+  <p id="notice" class="alert alert-success m-3">
+    <%= notice %>
+  </p>
+<% end %>
+
+<h1>Restaurants</h1>
+  <%= render 'table', restaurants: @restaurants %>
+
+<br>
+
+<%= link_to 'New Restaurant', new_restaurant_path %>

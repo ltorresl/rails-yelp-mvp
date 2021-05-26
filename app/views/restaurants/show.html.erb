@@ -1,0 +1,32 @@
+<div class="m-5">
+  <p id="notice"><%= notice %></p>
+
+  <h2>
+    <%= @restaurant.name %>
+  </h2>
+
+  <p>
+    <%= @restaurant.address %>
+  </p>
+
+  <p>
+    <%= @restaurant.phone_number %>
+  </p>
+
+  <p>
+    <%= @restaurant.category %>
+  </p>
+
+  <ul>
+    <% @restaurant.reviews.each do |review| %>
+      <li>
+        <%= review.content %> | <%= review.rating %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<%= link_to 'Add review', new_restaurant_review_path(@restaurant), class: 'btn btn-secondary m-5' %>
+<br>
+
+<%= link_to 'Back', restaurants_path %>
